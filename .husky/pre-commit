@@ -1,0 +1,8 @@
+yarn generate-process-env
+git add process.d.ts
+
+yarn generate-example-env
+git add .example.env
+
+yarn lint
+yarn build 

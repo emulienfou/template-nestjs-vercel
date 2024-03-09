@@ -1,0 +1,10 @@
+{
+  "runItOn": {
+    "commands": [
+      {
+        "match": ".env",
+        "cmd": "yarn generate-process-env; git add process.d.ts"
+      },
+    ]
+  }
+}
