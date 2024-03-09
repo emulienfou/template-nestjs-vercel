@@ -4,9 +4,6 @@ import { AppController } from './app.controller';
 import { INestApplication } from '@nestjs/common';
 import { mainConfig } from './utils/mainConfig';
 import * as request from 'supertest';
-import { ConfigModule } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
-import { MongooseCollection, MongooseSchema } from './entity/mongoose.entity';
 import { AppService } from './app.service';
 
 describe('AppController', () => {
@@ -14,12 +11,6 @@ describe('AppController', () => {
 
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        MongooseModule.forRoot(process.env.MONGO_DB),
-        MongooseModule.forFeature([
-          { name: MongooseCollection.name, schema: MongooseSchema },
-        ]),
-      ],
       controllers: [AppController],
       providers: [AppService],
     }).compile();
