@@ -1,10 +1,12 @@
 import 'dotenv/config';
-import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
+
 import { INestApplication } from '@nestjs/common';
-import { mainConfig } from './utils/mainConfig';
+import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
+
+import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { mainConfig } from './utils/mainConfig';
 
 describe('AppController', () => {
   let app: INestApplication;

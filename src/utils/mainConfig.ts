@@ -1,3 +1,5 @@
+import { writeFile } from 'node:fs/promises';
+
 import { ValidationError } from '@nestjs/class-validator';
 import {
   INestApplication,
@@ -6,8 +8,8 @@ import {
 } from '@nestjs/common';
 import { HttpAdapterHost } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
 import { AllExceptionsHandler } from './AllExceptionsHandler';
-import { writeFile } from 'fs/promises';
 
 export function mainConfig(app: INestApplication) {
   app.useGlobalPipes(
