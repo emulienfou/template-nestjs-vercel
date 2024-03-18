@@ -11,9 +11,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "generate-example-env": "node ./scripts/generate-example-env.mjs",
-    "generate-process-env": "node ./scripts/generate-process-env.mjs"
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
     "@mikro-orm/core": "^6.1.10",
