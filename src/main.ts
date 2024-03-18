@@ -1,10 +1,15 @@
 import 'dotenv/config';
-import { ValidationError } from '@nestjs/class-validator';
 
-import { Logger, PreconditionFailedException, ValidationPipe } from '@nestjs/common';
+import { writeFile } from 'node:fs/promises';
+
+import { ValidationError } from '@nestjs/class-validator';
+import {
+  Logger,
+  PreconditionFailedException,
+  ValidationPipe,
+} from '@nestjs/common';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { writeFile } from 'node:fs/promises';
 
 import { AppModule } from './app.module';
 import { AllExceptionsHandler } from './utils/AllExceptionsHandler';
