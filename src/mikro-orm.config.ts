@@ -13,5 +13,5 @@ export default defineConfig({
   password: process.env.DB_PASSWORD,
   debug: true,
   logger: logger.log.bind(logger),
-  driverOptions: { ssl: { rejectUnauthorized: false } },
+  driverOptions: { connection: { ssl: { rejectUnauthorized: false } } },
 });
