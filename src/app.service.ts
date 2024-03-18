@@ -1,4 +1,4 @@
-import { EntityManager, EntityRepository } from '@mikro-orm/postgresql';
+import { EntityManager, EntityRepository } from '@mikro-orm/core';
 import { Injectable } from '@nestjs/common';
 import { SendMessageDTO } from './dto/send-message.dto';
 import { Author } from './entities/Author';
